@@ -1,19 +1,21 @@
-#include <iostream>
-using namespace std;
+#include <stdio.h>
 int main()
 {
 	int t;
 	int n;
-	int ans=1;
-	cin>>t;
+	int ans;
+	scanf("%d",&t);
 	for (int i=0;i<t;i++)
 	{
-		cin>>n;
-		while (ans<n)
+                ans=1;
+		scanf("%d",&n);
+		do
 		{
 			ans=ans*2;
 		}
-		cout<<ans/2<<"\n";
+                while (ans<n);
+		printf("%d",ans/2);
+                printf("\n");
 	}
-	return 0;
+         return 0;
 }
